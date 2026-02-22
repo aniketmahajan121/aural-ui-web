@@ -1,0 +1,18 @@
+# Render Blueprint: Storybook Web Service
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: aural-ui-storybook
+    runtime: node
+    region: singapore
+
+    # Render sets PORT at runtime; Storybook must listen on it
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+
+    buildCommand: npm install && npm run theme-storybook
+    startCommand: npm run storybook:serve
+
+    # Optional: auto-deploy on push to main
+    # branch: main

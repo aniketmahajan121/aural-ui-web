@@ -33,7 +33,7 @@
     "theme-storybook": "tsx -r tsconfig-paths/register src/core/services/theme-storybook.ts",
     "prestorybook": "npm run theme-storybook",
     "storybook": "storybook dev -p 6006",
-    "storybook:prod": "storybook dev -p ${PORT:-6006} --host 0.0.0.0 --no-open",
+    "storybook:serve": "storybook dev -p ${PORT:-6006} --host 0.0.0.0 --ci",
     "prebuild-storybook": "tsx src/core/services/theme-storybook.ts || npm run theme-storybook",
     "build-storybook": "storybook build --docs-json",
     "deploy-storybook": "netlify deploy --prod --dir=storybook-static",
