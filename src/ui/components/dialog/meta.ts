@@ -1,0 +1,28 @@
+export const meta = {
+  dependencies: {
+    "@radix-ui/react-dialog": "^1.1.14",
+  },
+  internalDependencies: ["overlay", "cross-icon"],
+  tokens: [
+    "--bottom-sheet-shadow",
+    "--color-fm-blue-300",
+    "--color-fm-button-fill-secondary",
+    "--color-fm-divider-secondary",
+    "--color-fm-green-300",
+    "--color-fm-icon-active",
+    "--color-fm-neutral-300",
+    "--color-fm-primary",
+    "--color-fm-red-300",
+    "--color-fm-surface-frosted",
+    "--color-fm-yellow-300",
+    "--leading-fm-md",
+    "--leading-fm-xl",
+    "--text-fm-md",
+    "--text-fm-xl",
+    "--gradient-fm-stroke-positive",
+    "--gradient-fm-stroke-negative",
+    "--gradient-fm-stroke-warning",
+    "--gradient-fm-stroke-info",
+    "--gradient-fm-stroke-neutral",
+  ],
+}

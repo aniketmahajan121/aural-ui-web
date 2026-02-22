@@ -1,0 +1,20 @@
+export const meta = {
+  dependencies: {},
+  devDependencies: {},
+  internalDependencies: [],
+  tokens: [
+    "--color-fm-label-tertiary",
+    "--color-fm-primary",
+    "--color-fm-surface-frosted",
+    "--color-fm-surface-primary",
+    "--color-fm-tertiary",
+    "--font-fm-brand",
+    "--font-fm-text",
+    "--leading-fm-md",
+    "--leading-fm-sm",
+    "--leading-fm-xs",
+    "--text-fm-md",
+    "--text-fm-sm",
+    "--text-fm-xs",
+  ],
+}

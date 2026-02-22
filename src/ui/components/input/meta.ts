@@ -1,0 +1,28 @@
+export const meta = {
+  dependencies: {},
+  devDependencies: {},
+  internalDependencies: [
+    "char-count",
+    "helper-text",
+    "if-else",
+    "label",
+    "eye-close-icon",
+    "eye-open-icon",
+  ],
+  tokens: [
+    "--color-fm-divider-contrast",
+    "--color-fm-divider-negative",
+    "--color-fm-divider-positive",
+    "--color-fm-divider-primary",
+    "--color-fm-divider-tertiary",
+    "--color-fm-divider-warning",
+    "--color-fm-inactive",
+    "--color-fm-placeholder",
+    "--color-fm-primary",
+    "--color-fm-surface-frosted",
+    "--leading-fm-md",
+    "--leading-fm-xl",
+    "--radius-fm-s",
+    "--text-fm-md",
+  ],
+}

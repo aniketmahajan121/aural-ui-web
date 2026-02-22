@@ -1,0 +1,76 @@
+import * as React from "react"
+import { cn } from "@lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
+
+const overlayVariants = cva(
+  "fixed inset-0 z-40 data-[state=open]:animate-fm-fadeIn data-[state=closed]:animate-fm-fadeOut",
+  {
+    variants: {
+      opacity: {
+        high: "bg-black/80 ", // 80% opacity
+        medium: "bg-black/60", // 60% opacity
+        low: "bg-black/40", // 40% opacity
+        none: "bg-black",
+      },
+      glass: {
+        high: "backdrop-blur-lg",
+        medium: "backdrop-blur-md",
+        low: "backdrop-blur-sm",
+        none: "",
+      },
+      noise: {
+        high: "[background-image:var(--button-fm-noise-strong)]",
+        medium: "[background-image:var(--button-fm-noise)]",
+        low: "[background-image:var(--button-fm-noise-low)]",
+        none: "",
+      },
+    },
+    defaultVariants: {
+      opacity: "medium",
+      glass: "low",
+      noise: "low",
+    },
+  }
+)
+
+export interface OverlayProps
+  extends
+    React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof overlayVariants> {
+  classes?: {
+    content?: string
+    root?: string
+    wrapper?: string
+  }
+}
+
+const Overlay = React.forwardRef<HTMLDivElement, OverlayProps>(
+  ({ opacity, glass, noise, className, children, classes, ...props }, ref) => (
+    <>
+      <div
+        ref={ref}
+        className={cn(
+          overlayVariants({ opacity, glass, noise }),
+          className,
+          classes?.root
+        )}
+        {...props}
+      />
+      {children && (
+        <div
+          className={cn(
+            "pointer-events-none fixed inset-0 z-50 flex items-center justify-center",
+            classes?.wrapper
+          )}
+        >
+          <div className={cn("pointer-events-auto", classes?.content)}>
+            {children}
+          </div>
+        </div>
+      )}
+    </>
+  )
+)
+Overlay.displayName = "Overlay"
+
+export { Overlay, overlayVariants }

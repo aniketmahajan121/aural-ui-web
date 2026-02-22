@@ -1,0 +1,32 @@
+import React from "react"
+import { AccessibleIcon } from "@radix-ui/react-accessible-icon"
+
+export interface EmailIconProps extends React.SVGProps<SVGSVGElement> {
+  withAccessibility?: boolean
+}
+
+export const EmailIcon = (props: EmailIconProps) => {
+  const { withAccessibility = true, ...svgProps } = props
+
+  const svg = (
+    <svg
+      width="20"
+      height="21"
+      viewBox="0 0 20 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...svgProps}
+    >
+      <path
+        d="M17.7083 4.4585H18.4583V3.7085H17.7083V4.4585ZM17.7083 16.5418V17.2918H18.4583V16.5418H17.7083ZM2.29167 16.5418H1.54167V17.2918H2.29167V16.5418ZM2.29167 4.4585V3.7085H1.54167V4.4585H2.29167ZM10 11.3335L9.52507 11.914L10 12.3025L10.4749 11.914L10 11.3335ZM2.97493 4.61666L2.39446 4.14174L1.4446 5.30267L2.02507 5.7776L2.5 5.19713L2.97493 4.61666ZM17.9749 5.7776L18.5554 5.30267L17.6055 4.14174L17.0251 4.61666L17.5 5.19713L17.9749 5.7776ZM17.7083 4.4585H16.9583V16.5418H17.7083H18.4583V4.4585H17.7083ZM17.7083 16.5418V15.7918H2.29167V16.5418V17.2918H17.7083V16.5418ZM2.29167 16.5418H3.04167V4.4585H2.29167H1.54167V16.5418H2.29167ZM2.29167 4.4585V5.2085H17.7083V4.4585V3.7085H2.29167V4.4585ZM10 11.3335L10.4749 10.753L2.97493 4.61666L2.5 5.19713L2.02507 5.7776L9.52507 11.914L10 11.3335ZM17.5 5.19713L17.0251 4.61666L9.52507 10.753L10 11.3335L10.4749 11.914L17.9749 5.7776L17.5 5.19713Z"
+        fill="currentColor"
+      />
+    </svg>
+  )
+
+  if (withAccessibility) {
+    return <AccessibleIcon label="Email icon">{svg}</AccessibleIcon>
+  }
+
+  return svg
+}

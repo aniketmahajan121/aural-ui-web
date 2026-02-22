@@ -1,0 +1,23 @@
+export const meta = {
+  dependencies: {},
+  devDependencies: {},
+  internalDependencies: ["char-count", "helper-text", "label"],
+  tokens: [
+    "--color-fm-divider-contrast",
+    "--color-fm-divider-negative",
+    "--color-fm-divider-positive",
+    "--color-fm-divider-primary",
+    "--color-fm-divider-tertiary",
+    "--color-fm-divider-warning",
+    "--color-fm-inactive",
+    "--color-fm-placeholder",
+    "--color-fm-primary",
+    "--color-fm-surface-frosted",
+    "--font-fm-text",
+    "--leading-fm-md",
+    "--leading-fm-xl",
+    "--radius-fm-s",
+    "--text-fm-md",
+    "--text-fm-xl",
+  ],
+}

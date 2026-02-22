@@ -1,0 +1,25 @@
+export const meta = {
+  dependencies: {
+    "@radix-ui/react-tabs": "^1.1.12",
+  },
+  devDependencies: {},
+  internalDependencies: [],
+  tokens: [
+    "--animate-fm-fadeIn",
+    "--animate-fm-fadeOut",
+    "--color-fm-contrast",
+    "--color-fm-divider-tertiary",
+    "--color-fm-primary",
+    "--color-fm-secondary",
+    "--color-fm-tertiary",
+    "--leading-fm-md",
+    "--leading-fm-xl",
+    "--leading-fm-2xl",
+    "--text-fm-md",
+    "--text-fm-xl",
+    "--text-fm-2xl",
+    "--color-fm-primary-600",
+    "--color-fm-secondary-300",
+    "--color-fm-neutral-50",
+  ],
+}
