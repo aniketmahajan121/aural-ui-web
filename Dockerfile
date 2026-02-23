@@ -22,8 +22,12 @@ RUN npm run theme-storybook
 ENV PORT=6006
 EXPOSE 6006
 
-# storybook:serve uses -p ${PORT:-6006} and --host 0.0.0.0 (required for Railway)
-CMD ["npm", "run", "storybook:serve"]
+# Set in image so Railway start command doesn't need "NODE_ENV=production" (avoids "executable not found" when run without a shell)
+ENV NODE_ENV=production
+
+# Run via shell so Railway's start command (e.g. "NODE_ENV=production npm run ...") is executed correctly
+ENTRYPOINT ["sh", "-c"]
+CMD ["npm run storybook:serve"]
 
 # Health check uses runtime PORT so Railway (and local) can verify the server is up
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
