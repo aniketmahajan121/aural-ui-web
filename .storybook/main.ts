@@ -24,5 +24,14 @@ const config: StorybookConfig = {
   features: {
     experimentalComponentsManifest: true,
   },
+
+  // Explicit for host 0.0.0.0 (Docker/Railway); removes "allowedHosts is not defined" warning
+  viteFinal: (config) => ({
+    ...config,
+    server: {
+      ...config.server,
+      allowedHosts: true,
+    },
+  }),
 }
 export default config

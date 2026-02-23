@@ -24,6 +24,8 @@ EXPOSE 6006
 
 # Set in image so Railway start command doesn't need "NODE_ENV=production" (avoids "executable not found" when run without a shell)
 ENV NODE_ENV=production
+# Disable Storybook telemetry in container/Railway
+ENV STORYBOOK_DISABLE_TELEMETRY=true
 
 # Run via shell so Railway's start command (e.g. "NODE_ENV=production npm run ...") is executed correctly
 ENTRYPOINT ["sh", "-c"]
