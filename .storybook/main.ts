@@ -12,6 +12,9 @@ const config: StorybookConfig = {
       options: {
         toolsets: { dev: true, docs: true },
         experimentalFormat: "markdown",
+        // Bundle full docs and source in remote MCP (e.g. Railway) so get-documentation returns full content
+        includeSource: true,
+        includeDocs: true,
       },
     },
   ],
