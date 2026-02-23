@@ -1,0 +1,4 @@
+# Railway config (overrides dashboard). Prevents "executable node_env=production could not be found"
+# by using a plain start command; NODE_ENV is already set in the Dockerfile.
+[deploy]
+startCommand = "npm run storybook:serve"
