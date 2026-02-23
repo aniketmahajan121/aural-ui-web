@@ -1,4 +1,3 @@
-# Railway config (overrides dashboard). Prevents "executable node_env=production could not be found"
-# by using a plain start command; NODE_ENV is already set in the Dockerfile.
+# Railway: serve static Storybook + MCP with full docs/source (manifests from build).
 [deploy]
-startCommand = "npm run storybook:serve"
+startCommand = "node mcp-server.js"

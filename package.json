@@ -36,6 +36,7 @@
     "storybook:serve": "storybook dev -p ${PORT:-6006} --host 0.0.0.0 --ci",
     "prebuild-storybook": "tsx src/core/services/theme-storybook.ts || npm run theme-storybook",
     "build-storybook": "storybook build --docs-json",
+    "serve-storybook": "node mcp-server.js",
     "deploy-storybook": "netlify deploy --prod --dir=storybook-static",
     "lint": "eslint ./src --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "eslint ./src --ext .ts,.tsx,.js,.jsx --fix",
